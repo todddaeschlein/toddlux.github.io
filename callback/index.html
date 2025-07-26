@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Redirect</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <h2 style="font-family:sans-serif;color:#444">You may now close this tab.</h2>
+  <script>
+    const url = new URL(window.location.href);
+    const hash = url.hash;
+    const query = url.search;
+    if (hash || query) {
+      document.body.innerHTML += `<pre style="color:#888">${hash || query}</pre>`;
+    }
+  </script>
+</body>
+</html>
